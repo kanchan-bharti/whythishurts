@@ -9,38 +9,50 @@ class Home extends React.Component {
     constructor() {
         super();
         this.state = {
-            isShowaMale: false
+            isShowaMale: false,
+            isShowdiv: false
         };
         this.toggleShowMale = this.toggleShowMale.bind(this);
+        this.togglediv = this.togglediv.bind(this);
     }
 
+    togglediv(show) {
+        this.setState({ isShowdiv: show });
+    }
 
     toggleShowMale(show) {
-        this.setState({ isShowaMale:show });
-        // this.setState({showdiv:!showdiv});
+        this.setState({ isShowaMale: show });
+        this.togglediv(true);
     }
 
     render() {
 
-        const { isShowaMale } = this.state;
+        const { isShowaMale, isShowdiv } = this.state;
 
         return (
             <div className="container py-5">
 
                 <div className="row">
-                    <button disabled={isShowaMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(true)}  >
+                    <button className="btn col-6 bg-transparent col-6" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody profile" src={malebody} />
                     </button>
-                    <button disabled={!isShowaMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(false)}  >
+                    <button className="btn col-6 bg-transparent col-6" onClick={() => this.toggleShowMale(false)}  >
                         <img className="humanbody profile" src={femalebody} alt="" />
                     </button>
                 </div>
 
-                
+                <p>Tell us, where does it hurt.</p>
+
                 {/* Hidden div */}
-                <div className="row mx-auto">
-                    {`Hey ${isShowaMale? "man" : "woman"}!`}
-                </div>
+                { isShowdiv && (
+                    <Zoom center>
+                        <div className="row">
+                            <div className="mx-auto">
+                                {`Hey ${isShowaMale ? "man" : "woman"}!`}
+                            </div>
+                        </div>
+                    </Zoom>
+                )}
                 {/* Hidden div */}
 
                 <Zoom center>

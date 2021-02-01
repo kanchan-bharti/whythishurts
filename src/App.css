@@ -22,7 +22,7 @@
 }
 
 .profile:hover{
-  opacity: 95%;
+  opacity: 80%;
 }
 
 .bg-pink{
@@ -45,4 +45,10 @@
 
 .humanbody{
   height: 50vmin;
+}
+
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
 }
