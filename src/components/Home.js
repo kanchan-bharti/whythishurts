@@ -6,52 +6,40 @@ import femalebody from '../femalebody.png';
 
 class Home extends React.Component {
 
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //         isShowMale: false
-    //     };
-    //     this.toggleShowMale = this.toggleShowMale.bind(this);
-    // }
-
     constructor() {
         super();
-        const isShow = window.localStorage.getItem("isShowMale");;
-        this.state = { isShowMale: isShow || false };
+        this.state = {
+            isShowaMale: false
+        };
+        this.toggleShowMale = this.toggleShowMale.bind(this);
     }
 
-    toggleShowMale(isShow) {
-        window.localStorage.setItem("isShowMale", isShow);
-        this.setState({ isShowMale: isShow });
-    }
 
-    // toggleShowMale(show) {
-    //     this.setState({ isShowMale: show });
-    //     // this.setState({showdiv:!showdiv});
-    // }
+    toggleShowMale(show) {
+        this.setState({ isShowaMale:show });
+        // this.setState({showdiv:!showdiv});
+    }
 
     render() {
 
-        const { isShowMale } = this.state;
+        const { isShowaMale } = this.state;
 
         return (
             <div className="container py-5">
+
                 <div className="row">
-                    <button disabled={isShowMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(true)}  >
+                    <button disabled={isShowaMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody profile" src={malebody} />
                     </button>
-                    <button disabled={!isShowMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(false)}  >
+                    <button disabled={!isShowaMale} className="btn col-6 bg-transparent col-12 col-sm-6" onClick={() => this.toggleShowMale(false)}  >
                         <img className="humanbody profile" src={femalebody} alt="" />
                     </button>
                 </div>
 
-                <p>Tell us where does it hurt.</p>
-
+                
                 {/* Hidden div */}
                 <div className="row mx-auto">
-                    <div className="mx-auto">
-                        <p>Hey {`${isShowMale ? "man" : "woman"}!`}</p>
-                    </div>
+                    {`Hey ${isShowaMale? "man" : "woman"}!`}
                 </div>
                 {/* Hidden div */}
 
