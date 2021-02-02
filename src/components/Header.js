@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from 'reactstrap';
+import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 // Images:-1
 import logo from '../assets/logo.png';
