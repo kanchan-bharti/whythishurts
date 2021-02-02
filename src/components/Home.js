@@ -26,7 +26,7 @@ import human_ankle from '../assets/human_ankle.png';
 import male_knees from '../assets/male_knees.png';
 import female_knees from '../assets/female_knees.png';
 
-import { Container, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+import { Container, Card } from 'reactstrap';
 
 class Home extends React.Component {
 
