@@ -58,10 +58,10 @@ class Home extends React.Component {
 
                 <div className="row">
                     <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
-                        <img className="humanbody profile" src={malebody_orange} alt="Male" />
+                        <img className="humanbody" src={malebody_orange} alt="Male" />
                     </button>
                     <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
-                        <img className="humanbody profile" src={femalebody_orange} alt="Female" />
+                        <img className="humanbody" src={femalebody_orange} alt="Female" />
                     </button>
                 </div>
 
@@ -76,18 +76,18 @@ class Home extends React.Component {
                                         <div className="row">
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_head : female_head}`} className="profile body-part" alt="Head"/>
+                                                    <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head"/>
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2 ">
                                                 <button className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_chest : female_chest}`} className="profile body-part" alt="Heart area or Chest" />
+                                                    <img src={`${isShowaMale ? male_chest : female_chest}`} className="body-part" alt="Heart area or Chest" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_neck : female_neck}`} className="profile body-part" alt="Neck" />
+                                                    <img src={`${isShowaMale ? male_neck : female_neck}`} className="body-part" alt="Neck" />
                                                 </button>
                                             </Card>
                                         </div>
@@ -96,18 +96,18 @@ class Home extends React.Component {
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="profile body-part" alt="Central Chest Area" />
+                                                    <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="body-part" alt="Central Chest Area" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="profile body-part" alt="Stomach Area" />
+                                                    <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="body-part" alt="Stomach Area" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_hips : female_hips}`} className="profile body-part" alt="Hips"/>
+                                                    <img src={`${isShowaMale ? male_hips : female_hips}`} className="body-part" alt="Hips"/>
                                                 </button>
                                             </Card>
                                         </div>
@@ -115,17 +115,17 @@ class Home extends React.Component {
                                         <div className="row">
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={human_palm} className="profile body-part" alt="Hand" />
+                                                    <img src={human_palm} className="body-part" alt="Hand" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={human_finger} className="profile body-part" alt="Finger" />
+                                                    <img src={human_finger} className="body-part" alt="Finger" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    <img src={human_foot} className="profile body-part" alt="Foot" />
+                                                    <img src={human_foot} className="body-part" alt="Foot" />
                                                 </button>
                                             </Card>
                                         </div>
@@ -133,12 +133,12 @@ class Home extends React.Component {
                                         <div className="row">
                                             <Card className="option-card m-2 mx-auto">
                                                 <button className="btn bg-transparent col-6">
-                                                    <img src={human_ankle} className="profile body-part" alt="Ankle" />
+                                                    <img src={human_ankle} className="body-part" alt="Ankle" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2 mx-auto">
                                                 <button className="btn bg-transparent col-6">
-                                                    <img src={`${isShowaMale ? male_knees : female_knees}`} className="profile body-part" alt="Knees"/>
+                                                    <img src={`${isShowaMale ? male_knees : female_knees}`} className="body-part" alt="Knees"/>
                                                 </button>
                                             </Card>
                                         </div>
