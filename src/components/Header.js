@@ -1,7 +1,10 @@
 import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron, Modal, Button, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from 'reactstrap';
-import logo from '../logo.png';
-import { NavLink } from 'react-router-dom';
+import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from 'reactstrap';
+
+// Images:-1
+import logo from '../assets/logo.png';
+
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -13,12 +16,6 @@ class Header extends React.Component {
         // this.toggleNav = this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
     }
-
-    // toggleNav(){
-    //     this.setState({
-    //         isNavOpen: !this.state.isNavOpen
-    //     });
-    // }
 
     toggleModal() {
         this.setState({
