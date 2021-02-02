@@ -58,10 +58,10 @@ class Home extends React.Component {
 
                 <div className="row">
                     <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
-                        <img className="humanbody profile" src={malebody_orange} />
+                        <img className="humanbody profile" src={malebody_orange} alt="Male" />
                     </button>
                     <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
-                        <img className="humanbody profile" src={femalebody_orange} alt="" />
+                        <img className="humanbody profile" src={femalebody_orange} alt="Female" />
                     </button>
                 </div>
 
@@ -87,7 +87,6 @@ class Home extends React.Component {
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_neck : female_neck}`} className="profile body-part" alt="Neck" />
                                                 </button>
                                             </Card>
@@ -108,7 +107,6 @@ class Home extends React.Component {
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_hips : female_hips}`} className="profile body-part" alt="Hips"/>
                                                 </button>
                                             </Card>
@@ -117,19 +115,16 @@ class Home extends React.Component {
                                         <div className="row">
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={human_palm} className="profile body-part" alt="Hand" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={human_finger} className="profile body-part" alt="Finger" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2">
                                                 <button className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={human_foot} className="profile body-part" alt="Foot" />
                                                 </button>
                                             </Card>
@@ -138,19 +133,16 @@ class Home extends React.Component {
                                         <div className="row">
                                             <Card className="option-card m-2 mx-auto">
                                                 <button className="btn bg-transparent col-6">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={human_ankle} className="profile body-part" alt="Ankle" />
                                                 </button>
                                             </Card>
                                             <Card className="option-card m-2 mx-auto">
                                                 <button className="btn bg-transparent col-6">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_knees : female_knees}`} className="profile body-part" alt="Knees"/>
                                                 </button>
                                             </Card>
                                         </div>
                                 </Card>
-                                {/* Hey {`${isShowaMale ? "man" : "woman"}!`} */}
                             </div>
                         </div>
                     </Zoom>
