@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from 'reactstrap';
 
-// Images:-1
+// Images:
 import logo from '../assets/logo.png';
 
 
@@ -48,7 +48,7 @@ class Header extends React.Component {
                                 <h1>Why This Hurts?</h1>
                                 <p className="text-justify lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur officia ratione dicta ipsam aliquam cam natus iste quia animi repudiandae? Cum possimus ducimus vel expedita rem error quas exercitationem itaque.</p>
                             </div>
-                            <a className="btn bg-transparent col-12 col-sm-6" onClick={this.toggleModal}>
+                            <a href="#author-details" className="btn bg-transparent col-12 col-sm-6" onClick={this.toggleModal}>
                                 <div className="row">
                                     <img className="profile mx-auto" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="Author" />
                                 </div>
@@ -59,8 +59,8 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </Jumbotron>
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                    <ModalHeader toggle={this.toggleModal}>About Me</ModalHeader>
+                <Modal id="author-details" isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader className="mx-3" toggle={this.toggleModal}>About Me</ModalHeader>
                     <ModalBody>
                         <div className="container">
                             <div className="row">

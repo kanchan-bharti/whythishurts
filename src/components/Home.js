@@ -1,5 +1,8 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import PainRemoval from './PainRemovalModals/ExamplePainRemoval';
+
 
 // Images:
 
@@ -26,6 +29,7 @@ import human_ankle from '../assets/human_ankle.png';
 import male_knees from '../assets/male_knees.png';
 import female_knees from '../assets/female_knees.png';
 
+
 import { Container, Card } from 'reactstrap';
 
 class Home extends React.Component {
@@ -34,10 +38,12 @@ class Home extends React.Component {
         super();
         this.state = {
             isShowaMale: false,
-            isShowdiv: false
+            isShowdiv: false,
+            isModalOpen: false
         };
         this.toggleShowMale = this.toggleShowMale.bind(this);
         this.togglediv = this.togglediv.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
     }
 
     togglediv(show) {
@@ -49,6 +55,12 @@ class Home extends React.Component {
         this.togglediv(true);
     }
 
+    toggleModal() {
+        this.setState({
+            isModalOpen: !this.state.isModalOpen
+        });
+    }
+
     render() {
 
         const { isShowaMale, isShowdiv } = this.state;
@@ -57,10 +69,10 @@ class Home extends React.Component {
             <Container className="py-5">
 
                 <div className="row">
-                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
+                    <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody" src={malebody_orange} alt="Male" />
                     </a>
-                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
+                    <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
                         <img className="humanbody" src={femalebody_orange} alt="Female" />
                     </a>
                 </div>
@@ -70,84 +82,89 @@ class Home extends React.Component {
                 {/* Hidden div */}
                 { isShowdiv && (
                     <Zoom center>
-                        <div className="row">
+                        <div id="body-parts" className="row">
                             <div className="mx-auto">
                                 <Card className="mx-auto p-5 w-75 bg-grey m-2 container">
-                                        <div className="row">
-                                            <Card className="btn option-card m-2">
-                                                <a hrefclassName="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head"/>
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2 ">
-                                                <a className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_chest : female_chest}`} className="body-part" alt="Heart area or Chest" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_neck : female_neck}`} className="body-part" alt="Neck" />
-                                                </a>
-                                            </Card>
-                                        </div>
+                                    <div className="row">
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
+                                                <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={`${isShowaMale ? male_chest : female_chest}`} className="body-part" alt="Heart area or Chest" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={`${isShowaMale ? male_neck : female_neck}`} className="body-part" alt="Neck" />
+                                            </a>
+                                        </Card>
+                                    </div>
 
-                                        <div className="row">
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="body-part" alt="Central Chest Area" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
-                                                    <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="body-part" alt="Stomach Area" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    <img src={`${isShowaMale ? male_hips : female_hips}`} className="body-part" alt="Hips"/>
-                                                </a>
-                                            </Card>
-                                        </div>
+                                    <div className="row">
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="body-part" alt="Central Chest Area" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="body-part" alt="Stomach Area" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={`${isShowaMale ? male_hips : female_hips}`} className="body-part" alt="Hips" />
+                                            </a>
+                                        </Card>
+                                    </div>
 
-                                        <div className="row">
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    <img src={human_palm} className="body-part" alt="Hand" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    <img src={human_finger} className="body-part" alt="Finger" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2">
-                                                <a className="btn bg-transparent col-4">
-                                                    <img src={human_foot} className="body-part" alt="Foot" />
-                                                </a>
-                                            </Card>
-                                        </div>
+                                    <div className="row">
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={human_palm} className="body-part" alt="Hand" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={human_finger} className="body-part" alt="Finger" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
+                                                <img src={human_foot} className="body-part" alt="Foot" />
+                                            </a>
+                                        </Card>
+                                    </div>
 
-                                        <div className="row">
-                                            <Card className="option-card m-2 mx-auto">
-                                                <a className="btn bg-transparent col-6">
-                                                    <img src={human_ankle} className="body-part" alt="Ankle" />
-                                                </a>
-                                            </Card>
-                                            <Card className="option-card m-2 mx-auto">
-                                                <a className="btn bg-transparent col-6">
-                                                    <img src={`${isShowaMale ? male_knees : female_knees}`} className="body-part" alt="Knees"/>
-                                                </a>
-                                            </Card>
-                                        </div>
+                                    <div className="row">
+                                        <Card className="option-card m-2 mx-auto">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-6">
+                                                <img src={human_ankle} className="body-part" alt="Ankle" />
+                                            </a>
+                                        </Card>
+                                        <Card className="option-card m-2 mx-auto">
+                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-6">
+                                                <img src={`${isShowaMale ? male_knees : female_knees}`} className="body-part" alt="Knees" />
+                                            </a>
+                                        </Card>
+                                    </div>
                                 </Card>
                             </div>
                         </div>
                     </Zoom>
                 )}
                 {/* Hidden div */}
+
+                <Modal id="painRemoval" isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader className="mx-3" toggle={this.toggleModal}>Facts that explain why this hurts.</ModalHeader>
+                    <ModalBody>
+                        <PainRemoval/>
+                    </ModalBody>
+                </Modal>
 
                 <Zoom center>
                     <div className="row">
