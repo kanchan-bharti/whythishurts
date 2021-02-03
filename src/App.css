@@ -22,9 +22,9 @@
   height: 20vmin;
 }
 
-/* .profile:hover{
+.profile:hover{
   opacity: 0.8;
-} */
+}
 
 .bg-pink{
   background:#F9CACC;
@@ -53,6 +53,10 @@
   outline: none;
   box-shadow: none;
 }
+
+/* .btn:hover {
+  opacity: 0.8;
+} */
 
 .card{
   min-width: fit-content;

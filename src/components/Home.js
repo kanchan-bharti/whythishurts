@@ -57,12 +57,12 @@ class Home extends React.Component {
             <Container className="py-5">
 
                 <div className="row">
-                    <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
+                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody" src={malebody_orange} alt="Male" />
-                    </button>
-                    <button className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
+                    </a>
+                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
                         <img className="humanbody" src={femalebody_orange} alt="Female" />
-                    </button>
+                    </a>
                 </div>
 
                 <p>Tell us, where does it hurt.</p>
@@ -74,72 +74,72 @@ class Home extends React.Component {
                             <div className="mx-auto">
                                 <Card className="mx-auto p-5 w-75 bg-grey m-2 container">
                                         <div className="row">
-                                            <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                            <Card className="btn option-card m-2">
+                                                <a hrefclassName="btn bg-transparent col-4">
                                                     <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head"/>
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2 ">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_chest : female_chest}`} className="body-part" alt="Heart area or Chest" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     <img src={`${isShowaMale ? male_neck : female_neck}`} className="body-part" alt="Neck" />
-                                                </button>
+                                                </a>
                                             </Card>
                                         </div>
 
                                         <div className="row">
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="body-part" alt="Central Chest Area" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                     <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="body-part" alt="Stomach Area" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     <img src={`${isShowaMale ? male_hips : female_hips}`} className="body-part" alt="Hips"/>
-                                                </button>
+                                                </a>
                                             </Card>
                                         </div>
 
                                         <div className="row">
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     <img src={human_palm} className="body-part" alt="Hand" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     <img src={human_finger} className="body-part" alt="Finger" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2">
-                                                <button className="btn bg-transparent col-4">
+                                                <a className="btn bg-transparent col-4">
                                                     <img src={human_foot} className="body-part" alt="Foot" />
-                                                </button>
+                                                </a>
                                             </Card>
                                         </div>
 
                                         <div className="row">
                                             <Card className="option-card m-2 mx-auto">
-                                                <button className="btn bg-transparent col-6">
+                                                <a className="btn bg-transparent col-6">
                                                     <img src={human_ankle} className="body-part" alt="Ankle" />
-                                                </button>
+                                                </a>
                                             </Card>
                                             <Card className="option-card m-2 mx-auto">
-                                                <button className="btn bg-transparent col-6">
+                                                <a className="btn bg-transparent col-6">
                                                     <img src={`${isShowaMale ? male_knees : female_knees}`} className="body-part" alt="Knees"/>
-                                                </button>
+                                                </a>
                                             </Card>
                                         </div>
                                 </Card>
