@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 // Images:
-import logo from '../assets/logo.png';
+import logo from '../assets/logo_small.png';
 
 
 
@@ -50,7 +50,7 @@ class Header extends React.Component {
                             </div>
                             <a href="#author-details" className="btn bg-transparent col-12 col-sm-6" onClick={this.toggleModal}>
                                 <div className="row">
-                                    <img className="profile mx-auto" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="Author" />
+                                    <img className="profile hov_effect mx-auto" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="Author" />
                                 </div>
                                 <div className="row">
                                     <p className="mx-auto text-">Lorem ipsum</p>

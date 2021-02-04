@@ -1,7 +1,10 @@
-/*Blue Background: #0DFFA6
-  Blue: #157576
+/*Blue Background: #00af91
+  Blue: #007965
   Orange: #FF4001
+  Orange2: f58634
   Pink: #F9CACC
+  Yellow: #F39200
+  Yellow2: #ffcc29
 */
 
 .App {
@@ -22,7 +25,7 @@
   height: 20vmin;
 }
 
-.profile:hover{
+.hov_effect:hover{
   opacity: 0.8;
 }
 
@@ -35,7 +38,7 @@
 }
 
 .bg-orange{
-  background:#FF4001;
+  background:#f58634;
 }
 
 .inset-shadow{

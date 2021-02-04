@@ -7,7 +7,7 @@ import PainRemoval from './PainRemovalModals/ExamplePainRemoval';
 // Images:
 
 // import malebody from '../asets/humanbody.png';
-import malebody_orange from '../assets/humanbody_orange.png';
+import malebody_orange from '../assets/malebody_orange.png';
 // import femalebody from '../assets/femalebody.png';
 import femalebody_orange from '../assets/femalebody_orange.png';
 import female_head from '../assets/female_head.png';
@@ -70,10 +70,10 @@ class Home extends React.Component {
 
                 <div className="row">
                     <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
-                        <img className="humanbody" src={malebody_orange} alt="Male" />
+                        <img className="humanbody hov_effect" src={malebody_orange} alt="Male" />
                     </a>
                     <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
-                        <img className="humanbody" src={femalebody_orange} alt="Female" />
+                        <img className="humanbody hov_effect" src={femalebody_orange} alt="Female" />
                     </a>
                 </div>
 
