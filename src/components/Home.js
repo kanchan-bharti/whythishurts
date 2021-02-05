@@ -168,10 +168,10 @@ class Home extends React.Component {
 
                 <Zoom center>
                     <div className="row">
-                        <div className="col-12 col-sm-6 py-5 text-left">
+                        <div className="col-12 col-sm-6 p-5 text-left">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut beatae quos impedit est repudiandae asperiores quia eum nobis, inventore officiis dolorum laudantium placeat eligendi, odio animi doloribus. Illo, vel.
                         </div>
-                        <div className="col-12 col-sm-6 py-5 text-left">
+                        <div className="col-12 col-sm-6 p-5 text-left">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut beatae quos impedit est repudiandae asperiores quia eum nobis, inventore officiis dolorum laudantium placeat eligendi, odio animi doloribus. Illo, vel.
                         </div>
                     </div>

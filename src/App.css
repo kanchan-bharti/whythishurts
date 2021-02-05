@@ -89,3 +89,57 @@
 .pain-symbol{
   width: fit-content;
 }
+
+.opacity-50:hover{
+  opacity: 0.5;
+}
+
+.icon{
+  width: 15vmin;
+  padding: 0.5vmin;
+}
+
+.icon-lg{
+  width:18vmin;
+  padding: 0.5vmin;
+}
+
+.contact-us{
+  font-size:75%;
+}
+
+
+
+/* _______scrollbar-designs__________*/
+
+
+/* ::-webkit-scrollbar{
+  width: 16px;
+}
+::-webkit-scrollbar-track{
+  background: beige;
+}
+::-webkit-scrollbar-thumb{
+  background: #ffcc29;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #F39200;
+  border-radius: 25px;
+} */
+
+/*__________scrollbar-desings-end__________ */
+
+
+/*_________slection-designs________*/
+::selection{
+  background:#00af91;
+  color: white;
+}
+::-moz-selection{
+  background: #00af91;
+  color: white;
+}
+
+/*_________slection-designs-end________*/
