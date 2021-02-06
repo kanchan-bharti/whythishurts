@@ -94,20 +94,21 @@
   opacity: 0.5;
 }
 
-.icon{
-  width: 15vmin;
-  padding: 0.5vmin;
-}
-
-.icon-lg{
-  width:18vmin;
-  padding: 0.5vmin;
-}
-
 .contact-us{
   font-size:75%;
 }
 
+.contact-btn{
+  width: 13vh;
+  position: fixed;
+  z-index: 1000;
+  bottom: 3vmin;
+  right: 3vmin;
+}
+
+.contact-btn:hover{
+  color: #ffcc29;
+}
 
 
 /* _______scrollbar-designs__________*/

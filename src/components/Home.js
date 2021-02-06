@@ -3,7 +3,6 @@ import Zoom from 'react-reveal/Zoom';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import PainRemoval from './PainRemovalModals/ExamplePainRemoval';
 
-
 // Images:
 
 // import malebody from '../asets/humanbody.png';
@@ -28,6 +27,7 @@ import human_foot from '../assets/human_foot.png';
 import human_ankle from '../assets/human_ankle.png';
 import male_knees from '../assets/male_knees.png';
 import female_knees from '../assets/female_knees.png';
+import mail from '../assets/mail.svg';
 
 
 import { Container, Card } from 'reactstrap';
@@ -68,6 +68,8 @@ class Home extends React.Component {
         return (
             <Container className="py-5">
 
+                <a href="mailto:whythishurts@med.in"><img className="contact-btn" src={mail} alt="Contact Us" /></a>
+
                 <div className="row">
                     <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody hov_effect" src={malebody_orange} alt="Male" />
@@ -76,7 +78,7 @@ class Home extends React.Component {
                         <img className="humanbody hov_effect" src={femalebody_orange} alt="Female" />
                     </a>
                 </div>
-
+                <br/>
                 <p>Tell us, where does it hurt.</p>
 
                 {/* Hidden div */}
@@ -84,11 +86,10 @@ class Home extends React.Component {
                     <Zoom center>
                         <div id="body-parts" className="row">
                             <div className="mx-auto">
-                                <Card className="mx-auto p-5 w-75 bg-grey m-2 container">
+                                <Card className="mx-auto w-75 bg-grey container">
                                     <div className="row">
                                         <Card className="option-card m-2">
                                             <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
-                                                {/* <img src={require( `${isShowaMale ? '../assets/male_chest.png' : '../assets/female_chest.png' }` )} className="profile"/> */}
                                                 <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head" />
                                             </a>
                                         </Card>
@@ -162,16 +163,16 @@ class Home extends React.Component {
                 <Modal id="painRemoval" isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader className="mx-3" toggle={this.toggleModal}>Facts that explain why this hurts.</ModalHeader>
                     <ModalBody>
-                        <PainRemoval/>
+                        <PainRemoval />
                     </ModalBody>
                 </Modal>
 
                 <Zoom center>
                     <div className="row">
-                        <div className="col-12 col-sm-6 p-5 text-left">
+                        <div className="col-12 col-lg p-5 text-left">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut beatae quos impedit est repudiandae asperiores quia eum nobis, inventore officiis dolorum laudantium placeat eligendi, odio animi doloribus. Illo, vel.
                         </div>
-                        <div className="col-12 col-sm-6 p-5 text-left">
+                        <div className="col-12 col-lg p-5 text-left">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ut beatae quos impedit est repudiandae asperiores quia eum nobis, inventore officiis dolorum laudantium placeat eligendi, odio animi doloribus. Illo, vel.
                         </div>
                     </div>

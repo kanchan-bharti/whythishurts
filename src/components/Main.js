@@ -9,7 +9,7 @@ class Main extends React.Component {
             <div>
                 <Header/>
                 <Home/>
-                <Footer/>
+                {/* <Footer/> */}
             </div>
         )
     }

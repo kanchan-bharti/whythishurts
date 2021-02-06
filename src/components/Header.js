@@ -44,11 +44,11 @@ class Header extends React.Component {
                 <Jumbotron className="mb-5 rounded inset-shadow jumbotron">
                     <div className="container">
                         <div className="row row-header">
-                            <div className="col-12 col-sm-6">
+                            <div className="col-12 col-sm-6 align-self-center">
                                 <h1>Why This Hurts?</h1>
                                 <p className="text-justify lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur officia ratione dicta ipsam aliquam cam natus iste quia animi repudiandae? Cum possimus ducimus vel expedita rem error quas exercitationem itaque.</p>
                             </div>
-                            <a href="#author-details" className="btn bg-transparent col-12 col-sm-6" onClick={this.toggleModal}>
+                            <a href="#author-details" className="btn bg-transparent col-12 col-sm-6 align-self-center" onClick={this.toggleModal}>
                                 <div className="row">
                                     <img className="profile hov_effect mx-auto" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="Author" />
                                 </div>
