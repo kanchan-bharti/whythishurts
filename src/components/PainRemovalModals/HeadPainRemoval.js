@@ -10,7 +10,7 @@ class HeadPainRemoval extends React.Component {
         return (
             <Container>
                 <Row>
-                    <div className="col-12 col-md-3 text-justify px-2">
+                    <div className="col-12 col-md-4 col-lg-3 text-justify px-2">
                         {/*===============OVERVIEW=================*/}
                         <Accordion>
                             <Card>
@@ -43,7 +43,7 @@ class HeadPainRemoval extends React.Component {
                             {data[0].types.map((type, id) => (
                                 <Card>
                                     <CardHeader>
-                                        <Accordion.Toggle as={Card.Header} className="bg-transparent pointer" size="sm" eventKey={`${id}`}>
+                                        <Accordion.Toggle as={Card.Header} className="bg-transparent pointer" eventKey={`${id}`}>
                                             {type.title}
                                         </Accordion.Toggle>
                                     </CardHeader>
@@ -56,7 +56,7 @@ class HeadPainRemoval extends React.Component {
                         {/*=========================================*/}
                     </div>
 
-                    <div className="col-12 col-md-6 text-left px-lg-4 py-3 py-lg-0">
+                    <div className="col-12 col-md-8 col-lg-6 text-left px-lg-4 py-3 py-lg-0">
 
                         {data[0].causes.map(item => (
                             <div>
@@ -73,26 +73,18 @@ class HeadPainRemoval extends React.Component {
                                                 </Accordion.Toggle>
                                             </CardHeader>
                                             <Accordion.Collapse eventKey={`${id}`}>
-                                                <Card.Body className="px-4">{subItem.article}</Card.Body>
+                                                <Card.Body >{subItem.article}</Card.Body>
                                             </Accordion.Collapse>
                                         </Card>
                                     ))}
                                 </Accordion>
-                                {/* {item.subtitle.map(subItem => (
-                                    <div>
-                                        <div className="p-0 btn-light text-left bg-transparent pb-4">
-                                            <h5>{subItem.title}</h5>
-                                        </div>
-                                        <p className="pb-4">{subItem.article}</p>
-                                    </div>
-                                ))} */}
                             </div>
 
                         ))}
                     </div>
 
 
-                    <div className="col-12 col-md-3 text-left">
+                    <div className="col-12 col-lg-3 text-left">
                         {data[0].trivia.map(trivia => (
                             <div>
                                 <h2>{trivia.title}</h2>
