@@ -12,6 +12,10 @@
   font-size: 125%;
 }
 
+div{
+  white-space: pre-wrap;
+}
+
 .App-logo {
   height: 10vmin;
   pointer-events: none;
@@ -110,6 +114,8 @@
   color: #ffcc29;
 }
 
+.pointer:hover {cursor: pointer;}
+
 
 /* _______scrollbar-designs__________*/
 
@@ -133,7 +139,7 @@
 /*__________scrollbar-desings-end__________ */
 
 
-/*_________slection-designs________*/
+/*_________selection-designs________*/
 ::selection{
   background:#00af91;
   color: white;
