@@ -2,7 +2,9 @@ import React from 'react';
 import { Navbar, NavbarBrand,Jumbotron, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import {Container, Row} from 'react-bootstrap';
 // Images:
-import logo from '../assets/logo_small.png';
+import logo from '../assets/PNGs/logo_small.png';
+
+import Doctors from '../assets/SVGs/Doctors.svg';
 
 
 
@@ -38,14 +40,15 @@ class Header extends React.Component {
                                 <h1>Why This Hurts?</h1>
                                 <p className="text-justify px-lg-2 lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur officia ratione dicta ipsam aliquam cam natus iste quia animi repudiandae? Cum possimus ducimus vel expedita rem error quas exercitationem itaque.</p>
                             </div>
-                            <a href="#author-details" className="btn bg-transparent col-12 col-sm-6 align-self-center pr-0" onClick={this.toggleModal}>
+                            <img src={Doctors} className="col-12 col-sm-6 align-self-center pr-0" alt="" />
+                            {/* <a href="#author-details" className="btn bg-transparent col-12 col-sm-6 align-self-center pr-0" onClick={this.toggleModal}>
                                 <div className="row">
                                     <img className="profile hov_effect mx-auto" src="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg" alt="Author" />
                                 </div>
                                 <div className="row">
                                     <p className="mx-auto text-">Lorem ipsum</p>
                                 </div>
-                            </a>
+                            </a> */}
                         </Row>
                     </Container>
                 </Jumbotron>

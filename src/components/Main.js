@@ -2,7 +2,9 @@ import React from 'react';
 import Header from './Header';
 import Home from './Home2';
 import { Switch, Route, Redirect, Router } from 'react-router-dom';
-import HeadPainRemoval from './PainRemovalModals/HeadPainRemoval';
+import HeadPainRemoval from './PainRemoval/HeadAche/HeadPainRemoval';
+// import ShoulderPainRemoval from './PainRemoval/ShoulderAche/';
+
 import history from './history';
 // import PainRemoval from './PainRemovalModals/ExamplePainRemoval';
 // import Footer from './Footer';
@@ -10,22 +12,20 @@ import history from './history';
 class Main extends React.Component {
 
     render() {
-        // const HomePage = () => {
-        //     return (
-        //         <Home />
-        //     )
-        // }
 
         return (
             <div>
                 <Header />
-                <Router history={history}>
-                    <Switch location={this.props.location}>
-                        <Route path="/home" component={Home} />
-                        <Route path="/head" component={HeadPainRemoval} />
-                        <Redirect to="/home" />
-                    </Switch>
-                </Router>
+                {/* <BrowserRouter> */}
+                    <Router history={history}>
+                        <Switch location={this.props.location}>
+                            <Route path="/home" component={Home} />
+                            <Route path="/head-male" component={HeadPainRemoval} />
+                            <Route path="/head-female" component={HeadPainRemoval} />
+                            <Redirect to="/home" />
+                        </Switch>
+                    </Router>
+                {/* </BrowserRouter> */}
 
                 {/* <Footer/> */}
             </div>
