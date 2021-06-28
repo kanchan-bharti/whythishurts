@@ -269,6 +269,9 @@ input[type=checkbox] {
 .accordion-toggle-middle{
   background: linear-gradient(#f9cacc69, #00af9259);
 }
+.accordion-toggle-result{
+  background: linear-gradient(#ff020236, #00af9236);
+}
 .accordion-collapse{
   background: transparent;
 

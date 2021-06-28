@@ -1,5 +1,5 @@
 import React from 'react';
-import { data } from './HeadacheDataBase';
+import { data } from './HeadAcheDataBase';
 import { Accordion, Card, Container, Row, Form, Button } from 'react-bootstrap';
 
 import mail from '../../../assets/SVGs/mail.svg';
@@ -63,8 +63,8 @@ class HeadPainRemoval extends React.Component {
                         <Accordion>
                             <Card className=" accordion-card">
                                 <Card.Header className=" accordion-header">
-                                    <Accordion.Toggle as={Card.Header} className="pointer accordion-toggle" eventKey="PainDescription">
-                                        <span className="d-inline-block">Pain Description: </span>
+                                    <Accordion.Toggle as={Card.Header} className="pointer accordion-toggle d-flex justify-content-between" eventKey="PainDescription">
+                                        <span className="d-inline-block pt-1">Pain Description: </span>
                                         <span class="d-inline-block btn float-right">
                                             <i class="fa fa-angle-down"></i>
                                         </span>
@@ -111,8 +111,8 @@ class HeadPainRemoval extends React.Component {
 
                             <Card className=" accordion-card">
                                 <Card.Header className=" accordion-header">
-                                    <Accordion.Toggle as={Card.Header} className="pointer accordion-toggle" eventKey="PainWith">
-                                        <span className="d-inline-block">With Pain: </span>
+                                    <Accordion.Toggle as={Card.Header} className="pointer accordion-toggle d-flex justify-content-between" eventKey="PainWith">
+                                        <span className="d-inline-block pt-1">With Pain:</span>
                                         <span class="d-inline-block btn float-right">
                                             <i class="fa fa-angle-down"></i>
                                         </span>
@@ -178,8 +178,8 @@ class HeadPainRemoval extends React.Component {
                                         <Card className=" accordion-card">
                                             <Card.Header className=" accordion-header">
                                                 {/* {console.log("article 2: ", filtered.article, "id: ", id)} */}
-                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle pointer" eventKey={`${id}`}>
-                                                    <span className="d-inline-block">{filtered.title}</span>
+                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-result pointer d-flex justify-content-between pointer" eventKey={`${id}`}>
+                                                    <span className="d-inline-block pt-1">{filtered.title}</span>
                                                     <span class="d-inline-block btn float-right">
                                                         <i class="fa fa-angle-down"></i>
                                                     </span>
@@ -238,15 +238,39 @@ class HeadPainRemoval extends React.Component {
                                         {data[0].types.map((type, id) => (
                                             <Card className=" accordion-card">
                                                 <Card.Header className=" accordion-header">
-                                                    <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-middle pointer" eventKey={`${id}`}>
-                                                        <span className="d-inline-block">{type.title}</span>
+                                                    <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-middle pointer d-flex justify-content-between pointer" eventKey={`${id}`}>
+                                                        <span className="d-inline-block pt-1">{type.title}</span>
                                                         <span class="d-inline-block btn float-right">
                                                             <i class="fa fa-angle-down"></i>
                                                         </span>
                                                     </Accordion.Toggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse className="accordion-collapse " eventKey={`${id}`}>
-                                                    <Card.Body>{type.article}</Card.Body>
+                                                    <Card.Body>
+                                                        <p>{type.article}</p>
+                                                        <div>
+                                                            {type.used_when &&
+                                                                <div>
+                                                                    <p className="h4">Preventive Treatments</p>
+                                                                    <p>Used when {type.used_when} :</p>
+                                                                </div>
+                                                            }
+                                                            <ul>
+                                                                {type.treatments.map(treatment => (
+                                                                    <div>
+                                                                        {treatment &&
+                                                                            <li>
+                                                                                {treatment}
+                                                                            </li>
+                                                                        }
+                                                                    </div>
+
+                                                                ))}
+                                                            </ul>
+                                                            <a href="#when-to-see-doctor" className="a-link">When to see a doctor?</a>
+
+                                                        </div>
+                                                    </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                         ))}
@@ -257,21 +281,57 @@ class HeadPainRemoval extends React.Component {
 
                         {/* Common Causes and their treatments */}
 
+                        <div className="">
+                            <p className="h2 py-2">Common Causes</p>
+                            <p className="h4">There are some common causes of Headache:</p>
+                            <ul>
+                                {data[0].diagnosis[0].common_causes.map(common_causes => (
+                                    <li>{`${common_causes}`}</li>
+                                ))}
+                            </ul>
+                            <p>{data[0].diagnosis[0].cure[0].point} <span className="lead font-weight-bold">{data[0].diagnosis[0].cure[0].subpoint}</span></p>
+                            <Accordion>
+                                <Card className=" accordion-card">
+                                    <Card.Header className=" accordion-header">
+                                        <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-middle pointer" size="sm" eventKey="common-treatments-when-non-working-medication">
+                                            If medications aren’t working, there are several other remedies that can help treat headaches:
+                                            <span class="d-inline-block btn float-right">
+                                                <i class="fa fa-angle-down"></i>
+                                            </span>
+                                        </Accordion.Toggle>
+                                    </Card.Header>
+                                    <Accordion.Collapse className="accordion-collapse " eventKey="common-treatments-when-non-working-medication">
+                                        <Card.Body >
+                                            <ul>
+                                                {data[0].diagnosis[0].cure[0].helping_in_treatment.map(treatments => (
+                                                    <li>{`${treatments}`}</li>
+                                                ))}
+                                            </ul></Card.Body>
+                                    </Accordion.Collapse>
+                                </Card>
+                            </Accordion>
+
+
+                        </div>
+
+
                         {data[0].causes.map(item => (
                             <div>
-                                <div className="p-0 mt-3 text-justify bg-transparent pb-4 ">
-                                    <p className="h2 py-3">{item.title}</p>
+                                <div className="p-0 text-justify bg-transparent ">
+                                    <p className="h2 py-2">{item.title}</p>
                                 </div>
-                                <p className="pb-4">{item.article}</p>
+                                <p className="">{item.article}</p>
                                 <Accordion>
                                     {item.subtitle.map((subItem, id) => (
                                         <Card className=" accordion-card">
                                             <Card.Header className=" accordion-header">
-                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-middle pointer" size="sm" eventKey={`${id}`}>
-                                                    <span className="d-inline-block">{subItem.title}</span>
+                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle accordion-toggle-middle pointer d-flex justify-content-between" size="sm" eventKey={`${id}`}>
+                                                    {/* <div className="d-flex flex-row"> */}
+                                                    <span className="d-inline-block pt-1">{subItem.title}</span>
                                                     <span class="d-inline-block btn float-right">
                                                         <i class="fa fa-angle-down"></i>
                                                     </span>
+                                                    {/* </div> */}
                                                 </Accordion.Toggle>
                                             </Card.Header>
                                             <Accordion.Collapse className="accordion-collapse " eventKey={`${id}`}>
@@ -294,8 +354,8 @@ class HeadPainRemoval extends React.Component {
                                     {trivia.subtrivia.map((subTrivia, id) => (
                                         <Card className=" accordion-card">
                                             <Card.Header className="accordion-header">
-                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle pointer" size="sm" eventKey={`${id}`}>
-                                                    <span className="d-inline-block">{subTrivia.title}</span>
+                                                <Accordion.Toggle as={Card.Header} className="accordion-toggle pointer d-flex justify-content-between" size="sm" eventKey={`${id}`}>
+                                                    <span className="d-inline-block pt-1">{subTrivia.title}</span>
                                                     <span class="d-inline-block btn float-right">
                                                         <i class="fa fa-angle-down"></i>
                                                     </span>
