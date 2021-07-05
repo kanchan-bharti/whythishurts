@@ -7,8 +7,8 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptoms other than pain'],
+                        with: ['Only pain']
                     }
                 ],
                 preventive_treatment: {
@@ -22,8 +22,8 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptoms other than pain'],
+                        with: ['Only pain']
                     }
                 ],
                 preventive_treatment: {
@@ -52,8 +52,8 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Deep into joint','Feels better with rest','Gets worse with day','Radiating into buttocks, thigh, or groin','During activity involving joints'],
+                        with: ['Change in posture','Swelling','Difficulty in movement','Feeling of bones grating','Joint stiffness']
                     }
                 ],
                 preventive_treatment: {
@@ -67,8 +67,8 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['When twisting or rotating shoulder'],
+                        with: ['Only pain']
                     }
                 ],
                 preventive_treatment: {
@@ -82,8 +82,8 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Dull'],
+                        with: ['Only pain']
                     }
                 ],
                 preventive_treatment: {
@@ -93,11 +93,11 @@ export const data = [
             },
             {
                 title: 'Frozen shoulder',
-                article: '',
+                article: "Freezing stage: Any movement of your shoulder causes pain, and your shoulder's range of motion starts to become limited.\nFrozen stage. Pain may begin to diminish during this stage. However, your shoulder becomes stiffer, and using it becomes more difficult.\nThawing stage. The range of motion in your shoulder begins to improve",
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Difficulty in movement','Limited range of motion'],
+                        with: ['Stiffness']
                     }
                 ],
                 preventive_treatment: {
@@ -110,8 +110,8 @@ export const data = [
                 article: '',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Stinging'],
+                        with: ['Difficulty in movement','Loss/Altered sensation','Loss of bowel/bladder control','Exaggerated reflex activities','Spasms']
                     }
                 ],
                 preventive_treatment: {
@@ -124,8 +124,8 @@ export const data = [
                 article: 'This condition adds pressure to the spinal cord or nerve roots and is caused due to trauma or an injury',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Increases with shoulder movement','Tender'],
+                        with: ['Swelling','Bruising','Bulge','Grinding sound','Stiffness']
                     }
                 ],
                 preventive_treatment: {
@@ -138,13 +138,14 @@ export const data = [
                 article: 'The condition occurs when the spinal column narrows causing pressure on the spinal cord or nerve roots as it exits the vertebrae',
                 symptoms: [
                     {
-                        pain: ['Radiating','Intermittent'],
-                        with: ['Shortness of breath','Sweating','Nausea','Vomiting','Fatigue','Weakness','Anxiety']
+                        pain: ['Severe', 'Sudden','Sqeezing', 'Spreading to your neck', 'Spreading to jaw', 'Spreading to back'],
+                        with: ['Pressure', 'Nausea', 'Indigestion', 'Heartburn', 'Abdominal pain', 'Shortness of breath', 'Cold sweat', 'Fatigue', 'Lightheadedness']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: ['']
+                    diagnosis: ['Electrocardiogram (ECG)', 'Blood tests', 'Chest x-ray', 'Coronary catheterization (angiogram)', 'Cardiac CT'],
+                    treatments: ['Aspirin', 'Thrombolytics', 'Antiplatelet agents', 'Pain relievers', 'Beta blockers', 'Nitroglycerine', 'Coronary angioplasty (Stents)', 'Coronary artery bypass surgery']
                 }
             },
             {
@@ -152,8 +153,8 @@ export const data = [
                 article: '',
                 symptoms: [
                     {
-                        pain: [],
-                        with: []
+                        pain: ['Sharp','Burning','Radiating outward'],
+                        with: ['Numbness','Tingling','Weakness','Frequently shoulder falls asleep']
                     }
                 ],
                 preventive_treatment: {
@@ -166,22 +167,8 @@ export const data = [
                 article: '',
                 symptoms: [
                     {
-                        pain: [],
-                        with: []
-                    }
-                ],
-                preventive_treatment: {
-                    used_when: '',
-                    treatments: ['']
-                }
-            },
-            {
-                title: 'Injury due to overuse',
-                article: '',
-                symptoms: [
-                    {
-                        pain: [],
-                        with: []
+                        pain: ['Intense'],
+                        with: ['Out of place shoulder','Swelling','Bruising','Difficulty in movement']
                     }
                 ],
                 preventive_treatment: {
@@ -191,7 +178,7 @@ export const data = [
             },
             {
                 title: 'Bone spurs',
-                article: '',
+                article: 'Most bone spurs cause no signs or symptoms. You might not realize you have bone spurs until an X-ray for another condition reveals the growths. In some cases, though, bone spurs can cause pain and loss of motion in your joints.',
                 symptoms: [
                     {
                         pain: [],
@@ -207,7 +194,6 @@ export const data = [
         
         diagnosis: [
             {
-                point: 'Doctors usually check for tenderness and swelling and will assess the range of motion and joint stability. Doctors also use x-rays and MRIs to produce a detailed image of the shoulder to help with the diagnosis.',
                 common_causes: ['Injuries due to sports activities', 'Manual labour or repetitive movement','Certain diseases that affect the cervical spine, liver, heart or gallbladder can bring about pain that travels to the shoulder'],
                 treatment_options: [
                     {

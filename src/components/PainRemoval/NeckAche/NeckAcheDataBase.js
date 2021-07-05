@@ -4,16 +4,17 @@ export const data = [
             {
                 title: 'Muscle tension and strain.',
                 article: 'The causes can include',
-                they_include: ['Bad posture','A sudden jerk to the neck during exercise','Working for long hours at a desk in the same position','Sleeping in a bad position'],
+                they_include: ['Bad posture', 'A sudden jerk to the neck during exercise', 'Working for long hours at a desk in the same position', 'Sleeping in a bad position'],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Tender', 'Stiff'],
+                        with: ['Redness', 'Bruising', 'Limited motion', 'Spasm', 'Swelling', 'Weakness']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: []
+                    diagnosis: ['Physical Examination'],
+                    treatments: ['Rest', 'Ice-heat', 'Stretches']
                 }
             },
             {
@@ -22,43 +23,46 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
+                        pain: ['Symptom other than pain'],
                         with: ['']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
+                    diagnosis: ['Physical Examination by a doctor.'],
                     treatments: []
                 }
             },
             {
                 title: 'Heart attack',
                 article: 'In certain cases, neck pain is a symptom of heart attacks but it usually presents itself with other symptoms of heart attacks. These symptoms can include:',
-                they_include: ['Shortness of breath','Sweating','Nausea','Vomiting','Fatigue','Weakness','Pain in the arm or jaw'],
+                they_include: ['Shortness of breath', 'Sweating', 'Nausea', 'Vomiting', 'Fatigue', 'Weakness', 'Pain in the arm or jaw'],
                 symptoms: [
                     {
-                        pain: ['Pain in the arm or jaw','Radiating','Intermittent'],
-                        with: ['Shortness of breath','Sweating','Nausea','Vomiting','Fatigue','Weakness','Anxiety']
+                        pain: ['Pain in the arm or jaw', 'Radiating', 'Intermittent'],
+                        with: ['Shortness of breath', 'Sweating', 'Nausea', 'Vomiting', 'Fatigue', 'Weakness', 'Anxiety']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: []
+                    diagnosis: ['ECG', 'Blood tests', 'Chest X-ray', 'Echocardiogram', 'Angiogram', 'Cardiac CT scan'],
+                    treatments:['Aspirin','Antiplatelet agents','Surgery','Pain relievers']
                 }
             },
             {
                 title: 'Meningitis',
                 article: 'Meningitis is caused by an inflammation of the thin tissue surrounding the brain and spinal cord. In people who have meningitis, neck pain is accompanied by a fever and a headache',
-                they_include: ['Shortness of breath','Sweating','Nausea','Vomiting','Pain in the arm or jaw'],
+                they_include: ['Shortness of breath', 'Sweating', 'Nausea', 'Vomiting', 'Pain in the arm or jaw'],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['Fever','Headache']
+                        pain: ['Stiff','Severe'],
+                        with: ['Fever', 'Headache','Nausea','Vomiting','Confusion','Seizures','Sleepiness','Light sensitivity','Lost appetite','Skin rash']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: []
+                    diagnosis: ['Blood test','Spinal tap','CT Scan'],
+                    treatments: ['Bed rest','Plenty of fluids','Over-the-counter pain medications to help reduce fever and relieve body aches']
                 }
             },
             {
@@ -67,13 +71,14 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['Swelling of joints','Bone Spurs']
+                        pain: ['Tender','Stiff','In morning'],
+                        with: ['Swelling', 'Bone spurs', 'Warm joints','Fatique','Fever','Lost appetite']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: []
+                    diagnosis: ['X-rays','Ultrasound','MRI scans'],
+                    treatments: ['Nonsteroidal anti-inflammatory drugs (NSAIDs)','Steroids','Therapy','Surgery']
                 }
             },
             {
@@ -82,13 +87,14 @@ export const data = [
                 they_include: [],
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptom other than pain'],
+                        with: ['Back pain','Slow height reduction','Stooped posture','Easy breakage of bone']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: []
+                    diagnosis: ['Bone density tests','X-rays','CT scans'],
+                    treatments: ['Bisphosphonates','Hormone-related therapy','Monoclonal antibody treatments']
                 }
             },
             {
@@ -96,13 +102,14 @@ export const data = [
                 article: 'The condition causes muscle pain throughout the body, especially in the neck and shoulder region.',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Widespread'],
+                        with: ['Fatique','Cognitive difficulties']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: ['']
+                    diagnosis: ['Complete blood count','Erythrocyte sedimentation rate','Cyclic citrullinated peptide test','Rheumatoid factor','Thyroid function tests','Antinuclear antibody tests','Vitamin D test'],
+                    treatments: ['Pain relievers','Physical therapy','Muscle relaxants']
                 }
             },
             {
@@ -110,13 +117,14 @@ export const data = [
                 article: 'This condition is caused by degeneration of cervical disks that can occur as people age',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptom other than pain'],
+                        with: ['Tingling','Weakness', 'Balance problem','Bowel/bladder dysfunction']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: ['']
+                    diagnosis: ['X-rays','CT scans','MRI Scans'],
+                    treatments: ['Nonsteroidal anti-inflammatory drugs (NSAIDs)','Corticosteroids','Muscle relaxants']
                 }
             },
             {
@@ -124,13 +132,14 @@ export const data = [
                 article: 'This condition adds pressure to the spinal cord or nerve roots and is caused due to trauma or an injury',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptom other than pain'],
+                        with: ['Limbs pain','Tingling','Numbness','Weakness']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: ['']
+                    diagnosis: ['Neck X-rays','CT scans','MRI scans'],
+                    treatments: ['Nonsteroidal anti-inflammatory drugs (NSAIDs)','Corticosteroids','Muscle relaxants']
                 }
             },
             {
@@ -138,19 +147,20 @@ export const data = [
                 article: 'The condition occurs when the spinal column narrows causing pressure on the spinal cord or nerve roots as it exits the vertebrae',
                 symptoms: [
                     {
-                        pain: [''],
-                        with: ['']
+                        pain: ['Symptom other than pain'],
+                        with: ['Numbness','Tingling','Balance problem','Bowel/bladder dysfunction']
                     }
                 ],
                 preventive_treatment: {
                     used_when: '',
-                    treatments: ['']
+                    diagnosis: ['X-rays','CT scans','MRI scans'],
+                    treatments: ['Pain relievers','Antidepressants','Steroid injection','Physical therapy','Surgery']
                 }
             },
         ],
 
-        rare_cases : ['Tumors','Cancer of the Spine','Infections','Abscesses','Congenital abnormalities'],
-        
+        rare_cases: ['Tumors', 'Cancer of the Spine', 'Infections', 'Abscesses', 'Congenital abnormalities'],
+
         diagnosis: [
             {
                 common_causes: [],
@@ -181,7 +191,7 @@ export const data = [
                     {
                         point: 'Seek medical help immediately if you’ve been in an accident or fall that hurts your neck and also if symptoms persist for more than a week. You should see your doctor of you also have',
                         pain_with: [
-                            'Severe neck pain with no apparent cause', 'A lump in your neck', 'Swollen glands', 'Weakness','Numbness','Nausea','Headache','Fever','Pain radiating down your arms or legs','Tingling or numbness','Inability to touch the chin to your chest','Bladder or bowel dysfunction','Inability to move your arms or legs'
+                            'Severe neck pain with no apparent cause', 'A lump in your neck', 'Swollen glands', 'Weakness', 'Numbness', 'Nausea', 'Headache', 'Fever', 'Pain radiating down your arms or legs', 'Tingling','Numbness', 'Inability to touch the chin to your chest', 'Bladder or bowel dysfunction', 'Inability to move your arms or legs'
                         ],
                         tests: [
                             {
