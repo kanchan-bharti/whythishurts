@@ -29,7 +29,7 @@ class Header extends React.Component {
                 <Navbar dark className="bg-pink shadow p-3 rounded" expand="md">
                     <div className="container">
                         <NavbarBrand className="mx-auto p-0 pt-1" href="/">
-                            <img src={logo} className="App-logo" alt="WhyThisHurts Logo" />
+                            <img src={logo} className="App-logo" alt="WhyThisHurtsLogo" />
                         </NavbarBrand>
                     </div>
                 </Navbar>

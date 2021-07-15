@@ -1,8 +1,8 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import history from './history';
-// import { Modal, ModalHeader, ModalBody } from 'reactstrap';
-// import PainRemoval from './PainRemovalModals/ExamplePainRemoval';
+import { Link } from 'react-router-dom';
+
 
 // Images:
 
@@ -83,10 +83,10 @@ class Home extends React.Component {
                 {/* <img src={Doctors} className="mb-5 pb-3" alt="Doctors" width="70%"/> */}
 
                 <div className="row">
-                    <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
+                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(true)}  >
                         <img className="humanbody hov_effect" src={malebody_orange} alt="Male" />
                     </a>
-                    <a href="#body-parts" className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
+                    <a className="btn col-6 bg-transparent" onClick={() => this.toggleShowMale(false)}  >
                         <img className="humanbody hov_effect" src={femalebody_orange} alt="Female" />
                     </a>
                 </div>
@@ -102,70 +102,64 @@ class Home extends React.Component {
                                 <Card className="mx-auto w-75 bg-grey container">
                                     <div className="row">
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/head-male" : "/head-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/head-male" : "/head-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_head : female_head}`} className="body-part" alt="Head" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/neck-male" : "/neck-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/neck-male" : "/neck-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_neck : female_neck}`} className="body-part" alt="Neck" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/hand-male" : "/hand-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/hand-male" : "/hand-female"}`} className="btn bg-transparent col-4">
                                                 <img src={human_palm} className="body-part" alt="Hand" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                     </div>
 
                                     <div className="row">
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/chest-male" : "/chest-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/chest-male" : "/chest-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_center_chest : female_center_chest}`} className="body-part" alt="Central Chest Area" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/stomach-male" : "/stomach-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/stomach-male" : "/stomach-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_stomach : female_stomach}`} className="body-part" alt="Stomach Area" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/shoulder-male" : "/shoulder-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/shoulder-male" : "/shoulder-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_chest : female_chest}`} className="body-part" alt="Heart area or Chest" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                     </div>
 
                                     <div className="row">
-
-                                        {/* <Card className="option-card m-2">
-                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-4">
-                                                <img src={human_finger} className="body-part" alt="Finger" />
-                                            </a>
-                                        </Card> */}
                                         <Card className="option-card m-2">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/hip-male" : "/hip-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/hip-male" : "/hip-female"}`} className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_hips : female_hips}`} className="body-part" alt="Hips" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2 mx-auto">
-                                            <a onClick={() => history.push("/knee")} className="btn bg-transparent col-4">
+                                            <Link to="/knee" className="btn bg-transparent col-4">
                                                 <img src={`${isShowaMale ? male_knees : female_knees}`} className="body-part" alt="Knees" />
-                                            </a>
+                                            </Link>
                                         </Card>
                                         <Card className="option-card m-2 mx-auto">
-                                            <a onClick={() => history.push(`${isShowaMale ? "/foot-male" : "/foot-female"}`)} className="btn bg-transparent col-4">
+                                            <Link to={`${isShowaMale ? "/foot-male" : "/foot-female"}`} className="btn bg-transparent col-4">
                                                 <img src={human_foot} className="body-part" alt="Foot" />
-                                            </a>
+                                            </Link>
                                         </Card>
-                                        {/* <Card className="option-card m-2 mx-auto">
-                                            <a href="#painRemoval" onClick={this.toggleModal} className="btn bg-transparent col-6">
-                                                <img src={human_ankle} className="body-part" alt="Ankle" />
-                                            </a>
-                                        </Card> */}
                                     </div>
 
                                     <div className="row">
+                                        <Card className="option-card m-2 mx-auto">
+                                            <Link to="back" className="btn bg-transparent col-4">
+                                                <img src="" className="body-part" alt="Back" />
+                                            </Link>
+                                        </Card>
 
                                     </div>
                                 </Card>

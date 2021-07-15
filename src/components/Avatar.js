@@ -7,7 +7,7 @@ class Avatar extends React.Component {
     render() {
         return (
             <div className="">
-                <img src={male_body} alt="Male Body"/>
+                <img src={male_body} alt="MaleBody"/>
                 <map name="male_body">
                     <area shape="rect" coords="x1,y1,x2,y2" href=""></area>
                 </map>
